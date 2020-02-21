@@ -324,9 +324,6 @@ void OnCollisionExit (Collision col){
     if (col.collider.tag=="floor"){
     //anim.GetComponent<Animator>().SetBool("IsInAir?",true);
     }
-
 }
-
-
 }
 

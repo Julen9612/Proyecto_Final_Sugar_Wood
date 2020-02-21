@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Player", order = 1)]
+public class Player : ScriptableObject
 {
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float walkSpeed;
+    public float runSpeed;
+    public float jumpForce;
+    public float weight;
 
-    // Update is called once per frame
-    void Update()
+    public bool isJumping;
+    public bool isClimbing;
+
+
+    public void moveTo(Vector3 Direction)
     {
-        
+
     }
 }
