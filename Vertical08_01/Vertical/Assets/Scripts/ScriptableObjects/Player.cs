@@ -8,7 +8,7 @@ public class Player : ScriptableObject
 {
 
     public float walkSpeed;
-    public float runSpeed;
+    public float maxSpeed;
     public float jumpForce;
     public float weight;
 

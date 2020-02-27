@@ -481,37 +481,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 243941038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4818e554f34ef741a39fe1d27cf7e82, type: 3}
+  m_Script: {fileID: 11500000, guid: c0b118c2f57d8ba49948b9366b6a1a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkspeed: 4
-  runspeed: 7
-  anim: {fileID: 0}
-  climb: 0
-  jump: {x: 0, y: 3, z: 0}
-  jumpforce: 2
-  weight: 0
-  candy01: {fileID: 0}
-  candy02: {fileID: 0}
-  candy03: {fileID: 0}
-  muffin: {fileID: 9074232133590840601, guid: 3deefdac82fee7946ad42e59861c9601, type: 3}
-  cake: {fileID: 3259774452976701489, guid: 546559cd67d393f4b801f54913f64d1c, type: 3}
-  weightOK: {fileID: 0}
-  weightNO: {fileID: 0}
-  counter: 0
-  timecounter: 2
-  weighttext: {fileID: 1226902102}
-  pauseCanvas: {fileID: 0}
-  weightNotEnough: {fileID: 0}
-  countdown: 0
-  countdownText: {fileID: 0}
-  countdownFinal: 0
-  mensajeInicio: {fileID: 0}
-  mensajeCuidado: {fileID: 0}
-  timeOut: {fileID: 0}
-  necesitousarlo: 0
-  hiddencandy: {fileID: 747188735}
-  candytime: 5
+  player: {fileID: 11400000, guid: 72b84f94b9af64941abfdf1ab542601a, type: 2}
 --- !u!54 &243941040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -550,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243941038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.109, z: 0}
+  m_LocalPosition: {x: 0, y: 1.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 893901091}
@@ -770,7 +743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.67, z: -2.84}
+  m_LocalPosition: {x: 6.63, y: 2.88, z: -3.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1255,54 +1228,13 @@ GameObject:
   - component: {fileID: 893901091}
   - component: {fileID: 893901090}
   - component: {fileID: 893901089}
-  - component: {fileID: 893901088}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &893901088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893901087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4818e554f34ef741a39fe1d27cf7e82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkspeed: 0
-  runspeed: 0
-  anim: {fileID: 0}
-  climb: 0
-  jump: {x: 0, y: 0, z: 0}
-  jumpforce: 0
-  weight: 0
-  candy01: {fileID: 0}
-  candy02: {fileID: 0}
-  candy03: {fileID: 0}
-  muffin: {fileID: 0}
-  cake: {fileID: 0}
-  weightOK: {fileID: 0}
-  weightNO: {fileID: 0}
-  counter: 0
-  timecounter: 0
-  weighttext: {fileID: 0}
-  pauseCanvas: {fileID: 0}
-  weightNotEnough: {fileID: 0}
-  countdown: 0
-  countdownText: {fileID: 0}
-  countdownFinal: 0
-  mensajeInicio: {fileID: 0}
-  mensajeCuidado: {fileID: 0}
-  timeOut: {fileID: 0}
-  necesitousarlo: 0
-  hiddencandy: {fileID: 0}
-  candytime: 0
 --- !u!23 &893901089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1496,7 +1428,6 @@ GameObject:
   - component: {fileID: 1133552713}
   - component: {fileID: 1133552712}
   - component: {fileID: 1133552711}
-  - component: {fileID: 1133552714}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1576,18 +1507,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133552709}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1133552714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133552709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb90c13060679e645b519d7a89e10e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1138720208
 GameObject:
   m_ObjectHideFlags: 0
