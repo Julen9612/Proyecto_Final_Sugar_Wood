@@ -10,6 +10,7 @@ public class Player : ScriptableObject
     public float walkSpeed;
     public float maxSpeed;
     public float jumpForce;
+    public float climbForce;
     public float weight;
 
     public bool isJumping;

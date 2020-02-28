@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb90c13060679e645b519d7a89e10e92, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  walkSpeed: 100
-  maxSpeed: 0
-  jumpForce: 4
+  walkSpeed: 6
+  maxSpeed: 10
+  jumpForce: 3
+  climbForce: 3
   weight: 50
   isJumping: 0
-  isClimbing: 0
+  isClimbing: 1
