@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5D78C4CA-017A-DB10-14EC-0174D1A2553D}</ProjectGuid>
+    <ProjectGuid>{225345FF-AEBF-9B28-EFF5-EDD0C5EC8499}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,10 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
-    <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
+    <Compile Include="Assets\Scripts\CameraControl\CamDummy.cs" />
+    <Compile Include="Assets\Scripts\CameraControl\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\CameraControl\CamRot.cs" />
+    <Compile Include="Assets\Scripts\CandyAction.cs" />
+    <Compile Include="Assets\Scripts\CandySeeingPlayer.cs" />
     <Compile Include="Assets\Scripts\General\GameControler.cs" />
     <Compile Include="Assets\Scripts\Old\MainCharacter.cs" />
     <Compile Include="Assets\Scripts\Old\Menu.cs" />
@@ -71,29 +72,35 @@
     <Compile Include="Assets\Scripts\Old\Rotate.cs" />
     <Compile Include="Assets\Scripts\Old\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerAction.cs" />
+    <Compile Include="Assets\Scripts\PlayerTextAction.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Camera.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Player.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Sweets.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Vegetables.cs" />
+    <Compile Include="Assets\Scripts\UI\TutorialTxt.cs" />
+    <Compile Include="Assets\Scripts\VegetableAction.cs" />
+    <Compile Include="Assets\Scripts\VegetableSeeingPlayer.cs" />
+    <None Include="Assets\Resources\TextToShow\TutorialText\TutorialText.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -297,13 +304,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/User/Desktop/Abel/Trabajos/DAM_VIOD/DAMVIOD_2Y/Unity/Proyecto_Final_Sugar_Wood/Vertical08_01/Vertical/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/julen.hodgson/Desktop/Proyecto_Final_Sugar_Wood-master/Sugar_Wood/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
